@@ -6,8 +6,8 @@ import java.util.Scanner;
 /**
  * A simple console-based maths quiz for primary school children.
  *
- * @author Author1
- * @author Author2
+ * Kevin Chester Rovillos 1131397
+ * Nil
  */
 public class Main {
 
