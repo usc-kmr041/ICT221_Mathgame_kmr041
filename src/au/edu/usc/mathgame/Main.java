@@ -14,14 +14,22 @@ public class Main {
     public static void main(String[] args) {
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
+        Question q = new Question();
         int a = rand.nextInt(20);
         int b = rand.nextInt(20);
-        int solution = a+b;
-        Question q = new Question();
+        int c = rand.nextInt(4)+1;
+        int solution[] = {a+b,a+b,a-b,a*b,a/b};
+        int counter = 0;
 
-        q.showQuestion(a,b);
+        System.out.println(c);
+        q.addQuestion(a,b,c);
         int answer = input.nextInt();
-        q.checkAnswer(answer,solution);
+        q.checkAnswer(answer,solution[c]);
+
+        if (answer == solution[c]) {
+            counter++;
+        }
+        System.out.println(counter);
 
         /*Random rand = new Random();
         Scanner input = new Scanner(System.in);
