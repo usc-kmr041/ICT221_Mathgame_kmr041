@@ -23,6 +23,11 @@ public class Main {
 
         System.out.println(c);
         q.addQuestion(a,b,c);
+        if(c==4){
+            if(b==0){
+                q.addQuestion(a,b,c);
+            }
+        }
         int answer = input.nextInt();
         q.checkAnswer(answer,solution[c]);
 
