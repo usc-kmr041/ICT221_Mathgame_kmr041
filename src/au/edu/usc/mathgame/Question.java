@@ -1,7 +1,5 @@
 package au.edu.usc.mathgame;
 
-import java.util.Scanner;
-
 public class Question {
     int value1;
     int value2;
@@ -25,11 +23,12 @@ public class Question {
 
 
     }
-        public static void checkAnswer( int answer, int correct){
+        public static boolean checkAnswer(int answer, int correct){
             if (answer == correct) {
                 System.out.printf("  Yes!\n");
             } else {
                 System.out.printf("  No, the answer is %d.\n", correct);
             }
+            return false;
         }
     }
