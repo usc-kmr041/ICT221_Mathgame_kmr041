@@ -11,7 +11,13 @@ import java.util.Scanner;
  */
 public class Main {
 
+
     public static void main(String[] args) {
+        Main main = new Main();
+        main.playGame();
+    }
+
+    public static void playGame(){
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
         Question q = new Question();
