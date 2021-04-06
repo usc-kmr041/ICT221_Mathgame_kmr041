@@ -14,8 +14,40 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-        main.playGame();
+        Scanner yesno = new Scanner(System.in);
+        boolean yn = true;
+
+        do {
+            main.playGame();
+            System.out.println("Do you want to start a new game? Y/N");
+
+            char userChoice = yesno.next().charAt(0);
+
+            switch (userChoice) {
+                case 'y':
+                    break;
+
+                case 'n':
+                    yn = false;
+                    break;
+
+                default:
+                    System.out.println("That is not a valid entry. Ending Program...");
+                    System.exit(0);
+                    break;
+            }
+
+        }  while (yn);
+
+        System.out.println("Thank you for playing!");
+        System.exit(0);
+
     }
+
+
+
+
+
 
     public static void playGame(){
         Random rand = new Random();
@@ -27,13 +59,13 @@ public class Main {
 
         for (int i = 0; i < 10; i++) {
             int a = rand.nextInt(20);
-            int b = rand.nextInt(20);
+            int b = rand.nextInt(20+1);
             int c = rand.nextInt(4)+1;
             int solution[] = {a+b,a+b,a-b,a*b,a/b};
             q.addQuestion(a, b, c);
             if (c == 4) {
                 if (b == 0) {
-                    q.addQuestion(a, b, c);
+                        q.addQuestion(a, b, c);
                 }
             }
             int answer = input.nextInt();
