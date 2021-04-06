@@ -21,27 +21,29 @@ public class Main {
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
         Question q = new Question();
-        int a = rand.nextInt(20);
-        int b = rand.nextInt(20);
-        int c = rand.nextInt(4)+1;
-        int solution[] = {a+b,a+b,a-b,a*b,a/b};
+
+
         int counter = 0;
 
-        System.out.println(c);
-        q.addQuestion(a,b,c);
-        if(c==4){
-            if(b==0){
-                q.addQuestion(a,b,c);
+        for (int i = 0; i < 10; i++) {
+            int a = rand.nextInt(20);
+            int b = rand.nextInt(20);
+            int c = rand.nextInt(4)+1;
+            int solution[] = {a+b,a+b,a-b,a*b,a/b};
+            q.addQuestion(a, b, c);
+            if (c == 4) {
+                if (b == 0) {
+                    q.addQuestion(a, b, c);
+                }
             }
-        }
-        int answer = input.nextInt();
-        q.checkAnswer(answer,solution[c]);
+            int answer = input.nextInt();
+            q.checkAnswer(answer, solution[c]);
 
-        if (answer == solution[c]) {
-            counter++;
+            if (answer == solution[c]) {
+                counter++;
+            }
+            System.out.println(counter+" correct answers!");
         }
-        System.out.println(counter);
-
         /*Random rand = new Random();
         Scanner input = new Scanner(System.in);
 
