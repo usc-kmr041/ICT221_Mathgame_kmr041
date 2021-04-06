@@ -74,7 +74,7 @@ public class Main {
             if (answer == solution[c]) {
                 counter++;
             }
-            System.out.println(counter+" correct answers!");
+            System.out.println("You have a current high score of "+counter+" Well done!");
         }
         /*Random rand = new Random();
         Scanner input = new Scanner(System.in);
