@@ -21,9 +21,9 @@ public class Main {
             main.playGame();
             System.out.println("Do you want to start a new game? Y/N");
 
-            char userChoice = yesno.next().charAt(0);
+            char userYN = yesno.next().charAt(0);
 
-            switch (userChoice) {
+            switch (userYN) {
                 case 'y':
                     break;
 
