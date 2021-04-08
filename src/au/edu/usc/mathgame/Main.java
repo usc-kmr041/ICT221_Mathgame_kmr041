@@ -69,10 +69,13 @@ public class Main {
                 }
             }
             int answer = input.nextInt();
-            q.checkAnswer(answer, solution[c]);
 
             if (answer == solution[c]) {
                 counter++;
+                System.out.println("Correct!");
+            } else {
+                q.addQuestion(a,b,c);
+                q.checkAnswer(answer,solution[c]);
             }
             System.out.println("You have a current high score of "+counter+" Well done!");
         }

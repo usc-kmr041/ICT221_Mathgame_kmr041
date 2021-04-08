@@ -27,7 +27,7 @@ public class Question {
             if (answer == correct) {
                 System.out.printf("  Yes!\n");
             } else {
-                System.out.printf("  No, the answer is %d.\n", correct);
+                System.out.printf(" The answer is %d.\n", correct);
             }
             return false;
         }
