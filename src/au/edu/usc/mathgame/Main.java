@@ -50,6 +50,7 @@ public class Main {
 
 
     public static void playGame(){
+        /** This runs the main game and loops it back when user wants to play multiple games.**/
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
         Question q = new Question();
