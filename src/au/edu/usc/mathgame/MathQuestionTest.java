@@ -1,20 +1,15 @@
 package au.edu.usc.mathgame;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static au.edu.usc.mathgame.Question.addQuestion;
+import static au.edu.usc.mathgame.MathQuestion.addQuestion;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class QuestionTest {
+public class MathQuestionTest {
 
     @Test
     void testCreate() {
-        Question q = new Question();
+        MathQuestion q = new MathQuestion();
         /* addition question unit test correct*/
         addQuestion(3, 4, 1);
         assertFalse(q.checkAnswer(7, 7));

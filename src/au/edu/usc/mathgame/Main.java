@@ -15,11 +15,13 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         Scanner yesno = new Scanner(System.in);
+        JokeMathQuestion q = new JokeMathQuestion();
         boolean yn = true;
 
         do {
             main.playGame();
-            System.out.println("Do you want to start a new game? Y/N");
+            q.addJokeQuestion();
+            System.out.println("Do you want to start a new game? Y/N?");
 
             char userYN = yesno.next().charAt(0);
 
@@ -53,14 +55,14 @@ public class Main {
         /** This runs the main game and loops it back when user wants to play multiple games.**/
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
-        Question q = new Question();
+        MathQuestion q = new MathQuestion();
 
 
         int counter = 0;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 9; i++) {
             int a = rand.nextInt(20);
-            int b = rand.nextInt(20+1);
+            int b = rand.nextInt(20)+1;
             int c = rand.nextInt(4)+1;
             int solution[] = {a+b,a+b,a-b,a*b,a/b};
             q.addQuestion(a, b, c);
